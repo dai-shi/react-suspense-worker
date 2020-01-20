@@ -45,11 +45,7 @@ const fib = wrap(new Worker('./slow_fib.worker', { type: 'module' }));
 
 const DisplayFib = ({ number }) => {
   const result = fib(number);
-  return (
-    <div>
-      <div>result: {result}</div>
-    </div>
-  );
+  return <div>result: {result}</div>;
 };
 
 const Main = () => {
