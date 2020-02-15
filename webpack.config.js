@@ -7,8 +7,11 @@ const { DIR, EXT = 'ts' } = process.env;
 
 module.exports = {
   mode: 'development',
-  devtool: 'source-map',
+  devtool: 'cheap-module-eval-source-map',
   entry: `./examples/${DIR}/src/index.${EXT}`,
+  output: {
+    publicPath: '/',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: `./examples/${DIR}/public/index.html`,
@@ -17,23 +20,12 @@ module.exports = {
   ],
   module: {
     rules: [{
-      test: /\.jsx?$/,
+      test: /\.[jt]sx?$/,
       exclude: /node_modules/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            ['@babel/preset-env', {
-              useBuiltIns: 'usage',
-              corejs: 3,
-            }],
-            '@babel/preset-react',
-          ],
-        },
-      }],
-    }, {
-      test: /\.tsx?$/,
       loader: 'ts-loader',
+      options: {
+        transpileOnly: true,
+      },
     }],
   },
   resolve: {
@@ -45,5 +37,6 @@ module.exports = {
   devServer: {
     port: process.env.PORT || '8080',
     contentBase: `./examples/${DIR}/public`,
+    historyApiFallback: true,
   },
 };
