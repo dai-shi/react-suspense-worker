@@ -1,8 +1,9 @@
 # react-suspense-worker
 
-[![Build Status](https://travis-ci.com/dai-shi/react-suspense-worker.svg?branch=master)](https://travis-ci.com/dai-shi/react-suspense-worker)
-[![npm version](https://badge.fury.io/js/react-suspense-worker.svg)](https://badge.fury.io/js/react-suspense-worker)
-[![bundle size](https://badgen.net/bundlephobia/minzip/react-suspense-worker)](https://bundlephobia.com/result?p=react-suspense-worker)
+[![CI](https://img.shields.io/github/workflow/status/dai-shi/react-suspense-worker/CI)](https://github.com/dai-shi/react-suspense-worker/actions?query=workflow%3ACI)
+[![npm](https://img.shields.io/npm/v/react-suspense-worker)](https://www.npmjs.com/package/react-suspense-worker)
+[![size](https://img.shields.io/bundlephobia/minzip/react-suspense-worker)](https://bundlephobia.com/result?p=react-suspense-worker)
+[![discord](https://img.shields.io/discord/627656437971288081)](https://discord.gg/MrQdmzd)
 
 React Suspense for Web Worker with Comlink
 
@@ -38,7 +39,7 @@ const fib = i => (i <= 1 ? i : fib(i - 1) + fib(i - 2));
 expose(fib);
 ```
 
-app.js:
+App.jsx:
 
 ```javascript
 import { wrap } from 'react-suspense-worker';
