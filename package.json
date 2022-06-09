@@ -24,8 +24,8 @@
     "jest": "jest --preset ts-jest/presets/js-with-ts __tests__/*.ts",
     "tsc-test": "tsc --project . --noEmit",
     "apidoc": "documentation readme --section API --markdown-toc false --parse-extension ts src/*.ts",
-    "examples:01_minimal": "DIR=01_minimal EXT=js webpack-dev-server",
-    "examples:02_typescript": "DIR=02_typescript webpack-dev-server"
+    "examples:01_minimal": "DIR=01_minimal EXT=js webpack serve",
+    "examples:02_typescript": "DIR=02_typescript webpack serve"
   },
   "keywords": [
     "react",
