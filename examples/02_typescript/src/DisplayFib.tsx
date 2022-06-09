@@ -4,7 +4,7 @@ import { wrap } from 'react-suspense-worker';
 
 type Fib = (i: number) => number;
 
-const fib = wrap<Fib>(new Worker('./slow_fib.worker', { type: 'module' }));
+const fib = wrap<Fib>(new Worker(new URL('./slow_fib.worker', import.meta.url)));
 
 const fastFib = (i: number) => {
   if (i <= 1) return i;

@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 
 import { wrap } from 'react-suspense-worker';
 
-const fib = wrap(new Worker('./slow_fib.worker', { type: 'module' }));
+const fib = wrap(new Worker(new URL('./slow_fib.worker', import.meta.url)));
 
 const fastFib = (i) => {
   if (i <= 1) return i;

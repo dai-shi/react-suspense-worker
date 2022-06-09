@@ -43,7 +43,7 @@ app.js:
 ```javascript
 import { wrap } from 'react-suspense-worker';
 
-const fib = wrap(new Worker('./slow_fib.worker', { type: 'module' }));
+const fib = wrap(new Worker(new URL('./slow_fib.worker', import.meta.url)));
 
 const DisplayFib = ({ number }) => {
   const result = fib(number);
@@ -108,7 +108,7 @@ Wrap a worker to be used with React Suspense
 ```javascript
 import { wrap } from 'react-suspense-worker';
 
-const fib = wrap(new Worker('./slow_fib.worker', { type: 'module' }));
+const fib = wrap(new Worker(new URL('./slow_fib.worker', import.meta.url)));
 
 const DisplayFib = ({ number }) => {
   const result = fib(number);

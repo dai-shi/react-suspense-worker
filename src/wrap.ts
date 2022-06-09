@@ -56,7 +56,7 @@ const createProxy = (remote: any): any => {
  * @example
  * import { wrap } from 'react-suspense-worker';
  *
- * const fib = wrap(new Worker('./slow_fib.worker', { type: 'module' }));
+ * const fib = wrap(new Worker(new URL('./slow_fib.worker', import.meta.url)));
  *
  * const DisplayFib = ({ number }) => {
  *   const result = fib(number);
