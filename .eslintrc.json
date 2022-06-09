@@ -27,7 +27,10 @@
     "import/extensions": ["error", "never"],
     "import/prefer-default-export": "off",
     "import/no-unresolved": ["error", { "ignore": ["react-suspense-worker"] }],
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-use-before-define": "off",
+    "no-unused-vars": "off",
+    "react/function-component-definition": ["error", { "namedComponents": "arrow-function" }]
   },
   "overrides": [{
     "files": ["__tests__/**/*"],
