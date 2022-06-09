@@ -1,7 +1,7 @@
 {
   "name": "react-suspense-worker",
   "description": "React Suspense for Web Worker with Comlink",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Daishi Kato",
   "repository": {
     "type": "git",
