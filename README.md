@@ -16,9 +16,9 @@ can be treated as a normal value without async/await.
 
 Known issues:
 
--   No way to clear cache
--   Class not supported (yet)
--   (...and maybe more)
+*   No way to clear cache
+*   Class not supported (yet)
+*   (...and maybe more)
 
 ## Install
 
@@ -29,6 +29,7 @@ npm install react-suspense-worker
 ## Usage
 
 slow_fib.worker.js:
+
 ```javascript
 import { expose } from 'react-suspense-worker';
 
@@ -38,6 +39,7 @@ expose(fib);
 ```
 
 app.js:
+
 ```javascript
 import { wrap } from 'react-suspense-worker';
 
@@ -99,7 +101,7 @@ Wrap a worker to be used with React Suspense
 
 #### Parameters
 
--   `ep` **Endpoint** 
+*   `ep` **Endpoint** 
 
 #### Examples
 
