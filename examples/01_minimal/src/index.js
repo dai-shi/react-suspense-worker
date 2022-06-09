@@ -1,5 +1,5 @@
 import React, { Suspense, useState, useTransition } from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import { wrap } from 'react-suspense-worker';
 
@@ -52,4 +52,4 @@ const App = () => (
   </Suspense>
 );
 
-ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+createRoot(document.getElementById('app')).render(<App />);
