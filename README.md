@@ -53,9 +53,7 @@ const DisplayFib = ({ number }) => {
 
 const Main = () => {
   const [number, setNumber] = useState(1);
-  const [startTransition, isPending] = useTransition({
-    timeoutMs: 1000,
-  });
+  const [isPending, startTransition] = useTransition();
   const onClick = () => {
     startTransition(() => {
       setNumber((c) => c + 1);
